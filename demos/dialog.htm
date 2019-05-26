@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HmilyUI_对话框演示-by xuguangyan</title>
+    <link href="../lib/skins/default/css/hmilyui-all.css" rel="stylesheet" type="text/css" />
+    <script src="../lib/js/jquery-1.5.2.min.js" type="text/javascript"></script>
+    <script src="../lib/js/base.js" type="text/javascript"></script>
+    <script src="../lib/js/hmilyDrag.js" type="text/javascript"></script>
+    <script src="../lib/js/hmilyDialog.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript">
+		 var manager=null;
+         $(function() {
+            $("#btnOpenwin1").click(function(){
+              manager=$.hmilyDialog({title:'普通窗口',content:'内容..',width:400,height:300,alpha:0.8});
+            });
+            $("#btnOpenwin2").click(function(){
+              manager=$.hmilyDialog({target:$('#demo'),width:400,height:300,alpha:0.8});
+            });
+            $("#btnOpenwin3").click(function(){
+              manager=$.hmilyDialog({url:'http://www.ligerui.com/welcome.htm',width:400,height:300,alpha:0.8});
+            });
+            $("#btnOpenDialog2").click(function(){
+              //$.hmilyDialog.alert();
+              //$.hmilyDialog.alert('提示内容：这个提示框控件继承于Dialog',result);
+              //$.hmilyDialog.alert('提示内容：这个提示框控件继承于Dialog','温馨提示',result);
+              $.hmilyDialog.alert('提示内容：这个提示框控件继承于Dialog','温馨提示','none',result);
+            });
+            $("#btnOpenDialog3").click(function(){
+              $.hmilyDialog.success('恭喜你，操作成功！');
+            });
+            $("#btnOpenDialog4").click(function(){
+              $.hmilyDialog.error('对不起，操作失败！');
+            });
+            $("#btnOpenDialog5").click(function(){
+              $.hmilyDialog.info('这是提示信息...');
+            });
+            $("#btnOpenDialog6").click(function(){
+              $.hmilyDialog.question('你不觉得这个图标大了点吗？');
+            });
+            $("#btnOpenDialog7").click(function(){
+              $.hmilyDialog.warn('注意：此项操作会影响人品!');
+            });
+            $("#btnOpenDialog8").click(function(){
+              $.hmilyDialog.confirm('你确定要这样做吗？','',check);
+            });
+            $("#btnOpenDialog9").click(function(){
+              $.hmilyDialog.warning('你确定要删除此文件，强烈建议你操作前先备份或者选择取消操作！','',check);
+            });
+			
+			function result(item, Dialog, index){
+				alert('test');
+			}
+			
+			function check(sure){
+				alert(sure);
+			}
+         });
+     </script>
+</head>
+<body>
+<p>
+  <input id="btnOpenwin1" type="button" value="普通弹窗1" />
+  <input id="btnOpenwin2" type="button" value="普通弹窗2" />
+  <input id="btnOpenwin3" type="button" value="普通弹窗3" />
+  <br />
+<input id="btnOpenDialog2" type="button" value="提示框" />：
+<input id="btnOpenDialog3" type="button" value="成功提示" />
+<input id="btnOpenDialog4" type="button" value="错误提示" />
+<input id="btnOpenDialog5" type="button" value="信息提示" />
+<input id="btnOpenDialog6" type="button" value="疑问提示" />
+<input id="btnOpenDialog7" type="button" value="警告提示" /><br />
+<input id="btnOpenDialog8" type="button" value="确认框" />
+<input id="btnOpenDialog9" type="button" value="警告框" />
+
+</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p id="demo">这里的内容将会放到窗口中，点击<a href="#">这里</a>查看详情。</p>
+</body>
+</html>
+    

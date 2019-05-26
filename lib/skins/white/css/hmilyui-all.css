@@ -1,0 +1,42 @@
+.h-dialog { width:300px; height:200px; background:#FFF; border:1px solid #e7e7e7; padding: 1px 5px 1px 5px; position:fixed; z-index:1;border-radius: 5px;}
+.h-dialog-shadow { width:300px; height:200px; background:#EEE; border:1px dashed #999; padding:1px; position:absolute; z-index:999; cursor:move;}
+.h-dialog-mask{ position:absolute;left:0;top:0;width:100%;height:100%; filter:alpha(opacity=25);opacity:0.2;background: url(../images/overlay-mask.png) #777;display1:none;font-size:1px; *zoom:1;overflow:hidden; display:none;z-index: 9000;}
+
+/*窗口标题栏*/
+.h-window-bar { width:300px; height:45px; border-bottom:1px solid #e7e7e7; margin-bottom:1px; cursor:move; }
+.h-window-bar-l {width:230px; height:45px; float:left;}
+.h-window-bar-r { width:70px; height:45px; float:right;}
+
+/*关闭按钮*/
+.h-window-close { width:19px; height:19px; float:right; display:block; margin-top:12px; margin-right:3px; cursor:pointer; background:url(../images/window_top_close.png) no-repeat;}
+.h-window-close:hover{background:url(../images/window_top_close_hover.png) no-repeat;}
+.h-window-close:active{background:url(../images/window_top_close_mousedown.png) no-repeat;}
+
+/*最大化按钮*/
+.h-window-max { width:19px; height:19px; float:right; display:block; margin-top:12px; margin-right:3px; cursor:pointer; background:url(../images/window_top_max.png) no-repeat;}
+.h-window-max:hover{background:url(../images/window_top_max_hover.png) no-repeat;}
+.h-window-max:active{background:url(../images/window_top_max_mousedown.png) no-repeat;}
+
+/*最小化按钮*/
+.h-window-min { width:19px; height:19px; float:right; display:block; margin-top:12px; margin-right:3px; cursor:pointer; background:url(../images/window_top_min.png) no-repeat;}
+.h-window-min:hover{background:url(../images/window_top_min_hover.png) no-repeat;}
+.h-window-min:active{background:url(../images/window_top_min_mousedown.png) no-repeat;}
+
+/*图标\标题\内容*/
+.h-window-icon { width:24px; height:24px; float:left; display:none; margin-top:10px; margin-left:3px; background:url(../images/window_top_icon.png) no-repeat;}
+.h-window-title { width:200px; height:24px; line-height:24px; float:left; display:block; margin-top:10px; margin-left:3px; overflow:hidden; font-size: 1.17em; font-weight: bold; font-family: 'microsoft yahei','Hiragino Sans GB w3','\5b8b\4f53';}
+.h-window-content { width:287px; height:130px; padding:3px 6px 3px 6px; overflow:hidden; position:relative;}
+
+/*对话框图标*/
+.h-dialog-icon { width:48px; height:48px; position:absolute; left:10px; top:10px;}
+.h-dialog-tips { width:auto;height:auto; padding-left:75px; padding-top:15px;}
+.h-icon-done {background:url(../images/dialog_done.gif) no-repeat}
+.h-icon-error {background:url(../images/dialog_error.gif) no-repeat}
+.h-icon-info {background:url(../images/dialog_info.gif) no-repeat}
+.h-icon-question {background:url(../images/dialog_question.gif) no-repeat}
+.h-icon-warn {background:url(../images/dialog_warn.gif) no-repeat}
+
+/*底部栏*/
+.h-window-bot { width:300px; height:45px; margin-top:1px; }
+input.winBtn { width:72px; height:27px; background:url(../images/window_btn_bg.png) no-repeat; margin-top:9px; margin-right:5px; border:none; cursor:pointer; float:right;}
+input.winBtn:hover { background:url(../images/window_btn_bg_hover.png) no-repeat;}
